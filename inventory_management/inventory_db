@@ -1,0 +1,18 @@
+create DATABASE inventory_db;
+
+USE inventory_db;
+
+CREATE TABLE products (
+    product_id VARCHAR(20) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    quantity INT NOT NULL,
+    description TEXT
+);
+INSERT INTO products (product_id, name, price, quantity, description)
+VALUES
+    (1, 'Wireless Mouse', 15.99, 150, 'A comfortable and ergonomic wireless mouse for all-day use.'),
+    (2, 'Bluetooth Headphones', 59.99, 80, 'High-quality sound with noise cancellation and comfortable ear padding.'),
+    (3, 'Laptop Stand', 29.99, 50, 'Adjustable laptop stand for better posture and airflow.'),
+    (4, 'Smartphone Charger', 12.99, 200, 'Fast charging USB cable compatible with most smartphones.'),
+    (5, 'Gaming Keyboard', 89.99, 40, 'Mechanical keyboard with RGB lighting, perfect for gamers.');
